@@ -1,0 +1,20 @@
+
+{
+  "name": "tanjil-cyber-identity",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TANJIL - Cyberpunk Personal Portfolio and Digital Identity",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "qrcode": "^1.5.4"
+  }
+}
