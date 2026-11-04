@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070B14">
+<meta name="description" content="TANJIL - Personal Cyber Identity and Portfolio">
+<title>T A N J I L 🎀 | Cyber Identity</title>
+
+<style>
+:root {
+  --bg:#070B14;
+  --panel:#101827;
+  --cyan:#67E8F9;
+  --purple:#A78BFA;
+  --text:#F1F5FF;
+  --muted:#9BAAC0;
+  --border:#26344B;
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  background:
+    radial-gradient(ellipse at 15% 0%,#142C4D 0,transparent 38%),
+    radial-gradient(ellipse at 95% 35%,#291443 0,transparent 32%),
+    var(--bg);
+  color:var(--text);
+  font-family:Segoe UI,Arial,sans-serif;
+  line-height:1.7;
+}
+
+body:before {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.12;
+  background-image:
+    linear-gradient(#67E8F9 1px,transparent 1px),
+    linear-gradient(90deg,#67E8F9 1px,transparent 1px);
+  background-size:45px 45px;
+  mask-image:linear-gradient(to bottom,black,transparent);
+}
+
+.container {
+  width:min(1050px,92%);
+  margin:auto;
+  position:relative;
+}
+
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.logo {
+  font-weight:900;
+  color:var(--cyan);
+  letter-spacing:3px;
+}
+
+nav a {
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:15px;
+  font-size:13px;
+}
+
+.hero {
+  min-height:75vh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:65px 10px;
+}
+
+.kicker {
+  color:var(--cyan);
+  letter-spacing:5px;
+  font-size:12px;
+}
+
+h1 {
+  font-size:clamp(40px,9vw,88px);
+  line-height:1.1;
+  margin:18px 0;
+  text-shadow:0 0 30px #67E8F977;
+}
+
+.handle {
+  color:var(--purple);
+  letter-spacing:4px;
+  font-size:19px;
+}
+
+.hero p {
+  max-width:650px;
+  color:var(--muted);
+  margin:20px auto 30px;
+}
+
+.button {
+  display:inline-block;
+  text-decoration:none;
+  padding:11px 21px;
+  border-radius:30px;
+  margin:5px;
+  font-weight:bold;
+  color:#071019;
+  background:linear-gradient(100deg,var(--cyan),var(--purple));
+  box-shadow:0 0 25px #67E8F944;
+  border:0;
+  cursor:pointer;
+}
+
+.button.outline {
+  background:transparent;
+  color:var(--cyan);
+  border:1px solid var(--cyan);
+  box-shadow:none;
+}
+
+section { padding:35px 0 45px; }
+
+.heading {
+  font-size:25px;
+  margin-bottom:22px;
+}
+
+.heading span { color:var(--cyan); }
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
+}
+
+.card {
+  background:linear-gradient(145deg,#142035,#0D1422);
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:20px;
+  transition:.25s;
+}
+
+.card:hover {
+  transform:translateY(-4px);
+  border-color:var(--cyan);
+  box-shadow:0 0 20px #67E8F922;
+}
+
+.card h3 {
+  color:var(--cyan);
+  font-size:13px;
+  letter-spacing:2px;
+  margin-top:0;
+}
+
+.value {
+  overflow-wrap:anywhere;
+}
+
+.muted { color:var(--muted); }
+
+.socials {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:12px;
+}
+
+.socials a {
+  text-decoration:none;
+  color:var(--text);
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:15px;
+  transition:.2s;
+}
+
+.socials a:hover {
+  border-color:var(--cyan);
+  color:var(--cyan);
+  transform:translateY(-3px);
+}
+
+.qr-area {
+  text-align:center;
+  background:linear-gradient(145deg,#131F35,#0A101D);
+  border:1px solid var(--border);
+  padding:30px 15px;
+  border-radius:20px;
+}
+
+.qr-area img {
+  width:min(280px,85%);
+  border-radius:12px;
+  padding:12px;
+  background:white;
+}
+
+.qr-area p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+footer {
+  text-align:center;
+  padding:30px 10px;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+  font-size:13px;
+}
+
+@media(max-width:600px) {
+  nav { flex-wrap:wrap; gap:10px; }
+  nav a { margin-left:8px; }
+  .hero { min-height:65vh; }
+  section { padding:25px 0; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<nav>
+  <div class="logo">TANJIL.EXE</div>
+  <div>
+    <a href="#about">ABOUT</a>
+    <a href="#skills">INTERESTS</a>
+    <a href="#social">SOCIAL</a>
+    <a href="#qr">MY QR</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="kicker">PERSONAL DIGITAL IDENTITY / 001</div>
+
+    <h1>T A N J I L 🎀</h1>
+
+    <div class="handle">@4x.tanjil</div>
+
+    <p>
+      Welcome to my digital identity.
+      A personal space for creativity, technology,
+      gaming, anime and digital connections.
+    </p>
+
+    <a href="#social" class="button">CONNECT WITH ME</a>
+    <a href="TANJIL.vcf" download class="button outline">
+      SAVE CONTACT
+    </a>
+  </div>
+</header>
+
+<section id="about">
+  <h2 class="heading"><span>//</span> PROFILE DATA</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>IDENTITY</h3>
+      <div class="value">T A N J I L 🎀</div>
+      <div class="muted">@4x.tanjil</div>
+    </div>
+
+    <div class="card">
+      <h3>AGE</h3>
+      <div class="value">19+</div>
+    </div>
+
+    <div class="card">
+      <h3>EDUCATION</h3>
+      <div class="value">Intermediate 1</div>
+    </div>
+
+    <div class="card">
+      <h3>LOCATION</h3>
+      <div class="value">Mirpur 12, Dhaka, Bangladesh</div>
+    </div>
+
+    <div class="card">
+      <h3>RELATIONSHIP</h3>
+      <div class="value">Single</div>
+    </div>
+
+    <div class="card">
+      <h3>EMAIL</h3>
+      <div class="value">
+        <a href="mailto:tanjil.4x@gmail.com" style="color:var(--cyan)">
+          tanjil.4x@gmail.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="heading"><span>//</span> INTERESTS & SKILLS</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>CREATIVE</h3>
+      <div class="value">Video Editing • Digital Art • Graphics Design</div>
+    </div>
+
+    <div class="card">
+      <h3>TOOLS</h3>
+      <div class="value">CapCut • Alight Motion • ibisPaint • FlipaClip</div>
+    </div>
+
+    <div class="card">
+      <h3>HOBBIES</h3>
+      <div class="value">Anime • Gaming • Music • Editing</div>
+    </div>
+
+    <div class="card">
+      <h3>TECHNOLOGY</h3>
+      <div class="value">Software • Coding • Automation • Technology</div>
+    </div>
+  </div>
+</section>
+
+<section id="social">
+  <h2 class="heading"><span>//</span> SOCIAL CONNECTIONS</h2>
+
+  <div class="socials">
+    <a href="https://www.facebook.com/4x.tanjil" target="_blank" rel="noopener">Facebook ↗</a>
+
+    <a href="https://www.instagram.com/tanjil.4xx" target="_blank" rel="noopener">Instagram ↗</a>
+
+    <a href="https://www.threads.com/@tanjil.4xx" target="_blank" rel="noopener">Threads ↗</a>
+
+    <a href="https://www.tiktok.com/@4x.tanjil" target="_blank" rel="noopener">TikTok ↗</a>
+
+    <a href="https://github.com/tanjil-420" target="_blank" rel="noopener">GitHub ↗</a>
+
+    <a href="https://wa.me/8801985208807" target="_blank" rel="noopener">WhatsApp ↗</a>
+
+    <a href="mailto:tanjil.4x@gmail.com">Email ↗</a>
+  </div>
+</section>
+
+<section id="qr">
+  <h2 class="heading"><span>//</span> MY DIGITAL QR</h2>
+
+  <div class="qr-area">
+    <img id="qrImage" alt="My Portfolio QR Code">
+
+    <p>SCAN TO OPEN MY PERSONAL PORTFOLIO</p>
+
+    <button class="button" onclick="downloadQR()">
+      DOWNLOAD QR
+    </button>
+
+    <p id="qrStatus">Generating QR Code...</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 T A N J I L 🎀
+  <br>
+  CYBER IDENTITY // DIGITAL CREATION
+</footer>
+
+</div>
+
+<script>
+const qrImage = document.getElementById("qrImage");
+const qrStatus = document.getElementById("qrStatus");
+
+const portfolioURL = window.location.origin;
+
+qrImage.src =
+  "/api/qr?text=" + encodeURIComponent(portfolioURL);
+
+qrImage.onload = () => {
+  qrStatus.textContent = "QR CODE READY";
+};
+
+qrImage.onerror = () => {
+  qrStatus.textContent = "QR GENERATION FAILED";
+};
+
+function downloadQR() {
+  const link = document.createElement("a");
+  link.href = qrImage.src;
+  link.download = "TANJIL_PORTFOLIO_QR.png";
+  link.click();
+}
+</script>
+
+</body>
+</html>
